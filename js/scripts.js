@@ -7,12 +7,12 @@ function capitalize(sentence) {
 }
 
 function reverse(sentence) {
-  return capitalize(sentence).charAt(1) + capitalize(sentence).charAt(0);
+  return sentence + (capitalize(sentence).charAt(1) + capitalize(sentence).charAt(0));
 }
 
-function combine(sentence) {
-  return sentence+reverse(sentence);
+function count(sentence) {
+  return (sentence.length/2)+reverse(sentence);
 }
 
 const sentence = prompt("Enter a sentence: ");
-alert(combine(sentence));
+alert(count(sentence));
