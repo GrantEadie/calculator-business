@@ -6,5 +6,13 @@ function capitalize(sentence) {
   return (firstLast(sentence)).toUpperCase();
 }
 
+function reverse(sentence) {
+  return capitalize(sentence).charAt(1) + capitalize(sentence).charAt(0);
+}
+
+function combine(sentence) {
+  return sentence+reverse(sentence);
+}
+
 const sentence = prompt("Enter a sentence: ");
-alert(capitalize(sentence));
+alert(combine(sentence));
